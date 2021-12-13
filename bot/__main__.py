@@ -62,12 +62,12 @@ def stats(update, context):
 
 def start(update, context):
     buttons = button_build.ButtonMaker()
-    buttons.buildbutton("Owner", "@Nitesh696969")
+    buttons.buildbutton("Owner", "https://t.me/Nitesh696969")
     buttons.buildbutton("Mirror Group", "https://t.me/mirror_group_69")
     reply_markup = InlineKeyboardMarkup(buttons.build_menu(2))
     if CustomFilters.authorized_user(update) or CustomFilters.authorized_chat(update):
         start_string = f'''
-This bot can mirror all your links to Google Drive!
+Hey {update.message.chat.first_name} This bot can mirror all your links to Google Drive!
 Type /{BotCommands.HelpCommand} to get a list of available commands
 '''
         sendMarkup(start_string, context.bot, update, reply_markup)
