@@ -148,6 +148,7 @@ def get_readable_message():
                 except:
                     pass
                 try:
+                    msg += f'\n<b>User:</b> {download.message.from_user.first_name} ➡️<code>{download.message.from_user.id}</code>'
                     msg += f"\n<b>Seeders:</b> {download.torrent_info().num_seeds}" \
                            f" | <b>Leechers:</b> {download.torrent_info().num_leechs}"
                 except:
