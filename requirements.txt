@@ -4,7 +4,7 @@ aria2p
 appdirs
 attrdict
 beautifulsoup4
-cloudscrape
+cloudscrape==1.2.71
 feedparser
 google-api-python-client
 google-auth-httplib2
